@@ -78,6 +78,7 @@ public class PlusSignTokenizer extends Tokenizer {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
+        this.position = 0;
         this.stringToTokenize = stringBuilder.toString();
     }
 
