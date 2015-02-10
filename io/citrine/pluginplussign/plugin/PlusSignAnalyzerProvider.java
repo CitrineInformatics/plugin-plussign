@@ -24,11 +24,8 @@ public class PlusSignAnalyzerProvider extends AbstractIndexAnalyzerProvider<Plus
     /* This function needs to be overridden to return an instance of PlusSignAnalyzer. */
     @Override
     public PlusSignAnalyzer get() {
-        return this.analyzer;
+        return new PlusSignAnalyzer();
     }
-
-    /* Instance of PlusSignAnalyzer class that is returned by this class. */
-    protected PlusSignAnalyzer analyzer = new PlusSignAnalyzer();
 
     /* Name to associate with this class. We will use this in PlusSignBinderProcessor. */
     public static final String NAME = "plus_sign";
