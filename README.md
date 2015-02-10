@@ -4,7 +4,7 @@
 
 From the top of the cloned directory, run:
 
-        javac -d <path>/<to>/<elasticsearch>/plugin -cp <path>/<to>/<elasticsearch>/lib:. io/citrine/pluginplussign/plugin/PlusSignPlugin.java
+        javac -d <path>/<to>/<elasticsearch>/plugin -cp <path>/<to>/<elasticsearch>/lib/*:. io/citrine/pluginplussign/plugin/PlusSignPlugin.java
 
 where `<path>/<to>/<elasticsearch>` is the path to your Elasticsearch installation.
 
