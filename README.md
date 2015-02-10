@@ -19,34 +19,34 @@ where `<path>/<to>/<elasticsearch>` is the path to your Elasticsearch installati
 
         curl -XGET 'localhost:9200/test/_analyze?analyzer=plus_sign&pretty=true' -d 'This+is++some+text'
 
-You should see the following response from Elasticsearch:
+    You should see the following response from Elasticsearch:
 
-    {
-      "tokens" : [ {
-        "token" : "this",
-        "start_offset" : 0,
-        "end_offset" : 0,
-        "type" : "word",
-        "position" : 1
-      }, {
-        "token" : "is",
-        "start_offset" : 0,
-        "end_offset" : 0,
-        "type" : "word",
-        "position" : 2
-      }, {
-        "token" : "some",
-        "start_offset" : 0,
-        "end_offset" : 0,
-        "type" : "word",
-        "position" : 3
-      }, {
-        "token" : "text",
-        "start_offset" : 0,
-        "end_offset" : 0,
-        "type" : "word",
-        "position" : 4
-      } ]
-    }
+        {
+          "tokens" : [ {
+            "token" : "this",
+            "start_offset" : 0,
+            "end_offset" : 0,
+            "type" : "word",
+            "position" : 1
+          }, {
+            "token" : "is",
+            "start_offset" : 0,
+            "end_offset" : 0,
+            "type" : "word",
+            "position" : 2
+          }, {
+            "token" : "some",
+            "start_offset" : 0,
+            "end_offset" : 0,
+            "type" : "word",
+            "position" : 3
+          }, {
+            "token" : "text",
+            "start_offset" : 0,
+            "end_offset" : 0,
+            "type" : "word",
+            "position" : 4
+          } ]
+        }
 
 At this point you can use the `plus_sign` analyzer just as you would any of the built-in Elasticsearch analyzers.
