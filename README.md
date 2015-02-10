@@ -2,11 +2,11 @@
 
 ## Installation
 
-From the top of the cloned directory, run:
+Clone this repository in `<path>/<to>/<elasticsearch>/plugins` where `<path>/<to>/<elasticsearch>` is the path to your Elasticsearch installation. From `<path>/<to>/<elasticsearch>/plugins/plugin-plussign`, run the following command:
 
-        javac -d <path>/<to>/<elasticsearch>/plugins -cp <path>/<to>/<elasticsearch>/lib/*:. io/citrine/pluginplussign/plugin/PlusSignPlugin.java
+        javac -cp ../../lib/*:. io/citrine/pluginplussign/plugin/PlusSignPlugin.java
 
-where `<path>/<to>/<elasticsearch>` is the path to your Elasticsearch installation.
+This will compile the plugin against your ElasticSearch installation and, since it resides in the plugins directory, it can be used as a plugin right away.
 
 ## Running the plugin
 
