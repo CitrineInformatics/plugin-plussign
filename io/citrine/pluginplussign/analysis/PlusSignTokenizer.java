@@ -89,5 +89,5 @@ public class PlusSignTokenizer extends Tokenizer {
     /* This stores the current position in this.stringToTokenize. We will increment its value as
      * we call the incrementToken() function.
      */
-    protected int position;
+    protected int position = 0;
 }
