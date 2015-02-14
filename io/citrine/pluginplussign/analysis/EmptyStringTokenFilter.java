@@ -5,11 +5,6 @@ import  org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import  org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import  java.io.IOException;
 
-/* This is our custom token filter. It simply removes empty strings from a token stream. For example,
- * if a stream contains the tokens “This”, “is”, “”, “some”, and “text” it would remove the third
- * token while letting all other tokens pass through. It extends the Lucene class
- * org.apache.lucene.analysis.TokenFilter.
- */
 public class EmptyStringTokenFilter extends TokenFilter {
 
     /* The constructor for our custom token filter just calls the TokenFilter constructor; that

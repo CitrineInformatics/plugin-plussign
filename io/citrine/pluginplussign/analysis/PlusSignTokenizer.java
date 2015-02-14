@@ -4,12 +4,6 @@ import  org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import  java.io.IOException;
 import  java.io.Reader;
 
-/* This is our custom tokenizer class to split a string wherever a + sign is found, which extends
- * org.apache.lucene.analysis.Tokenizer. It’s purpose is to take a string such as
- * “This+is++some+text” and break it into tokens - “This”, “is”, “”, “some”, and “text”. Notice
- * that this leaves an empty string where successive + symbols are found. We will deal with that
- * using the token filter that we make further on in this post.
- */
 public class PlusSignTokenizer extends Tokenizer {
 
     /* Lucene uses attributes to store information about a single token. For this tokenizer, the

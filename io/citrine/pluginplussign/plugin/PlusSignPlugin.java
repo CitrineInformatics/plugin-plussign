@@ -2,9 +2,6 @@ package io.citrine.pluginplussign.plugin;
 import  org.elasticsearch.index.analysis.AnalysisModule;
 import  org.elasticsearch.plugins.AbstractPlugin;
 
-/* This class defines our plugin that provides the PlusSignAnalyzer class that we built. It extends
- * the Elasticsearch class org.elasticsearch.plugins.AbstractPlugin.
- */
 public class PlusSignPlugin extends AbstractPlugin {
 
     /* Set the name that will be assigned to this plugin. */

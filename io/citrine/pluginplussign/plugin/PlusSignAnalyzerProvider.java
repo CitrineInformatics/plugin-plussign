@@ -9,9 +9,6 @@ import  org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider;
 import  org.elasticsearch.index.settings.IndexSettings;
 import  java.io.IOException;
 
-/* Provider to generate an instance of a PlusSignAnalyzer object. It extends the Elasticsearch class
- * org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider.
- */
 public class PlusSignAnalyzerProvider extends AbstractIndexAnalyzerProvider<PlusSignAnalyzer> {
 
     /* Constructor. Nothing special here. */
