@@ -75,6 +75,14 @@ public class PlusSignTokenizer extends Tokenizer {
         this.stringToTokenize = stringBuilder.toString();
     }
 
+    /* Reset the stored position for this object when reset() is called.
+     */
+    @Override
+    public void reset() throws IOException {
+        super.reset();
+        this.position = 0;
+    }
+
     /* This object stores the string that we are turning into tokens. We will process its content
      * as we call the incrementToken() function.
      */
