@@ -1,8 +1,8 @@
 package io.citrine.pluginplussign.plugin;
 import  org.elasticsearch.index.analysis.AnalysisModule;
-import  org.elasticsearch.plugins.AbstractPlugin;
+import  org.elasticsearch.plugins.Plugin;
 
-public class PlusSignPlugin extends AbstractPlugin {
+public class PlusSignPlugin extends Plugin {
 
     /* Set the name that will be assigned to this plugin. */
     @Override
