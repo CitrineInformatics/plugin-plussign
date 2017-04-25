@@ -1,4 +1,5 @@
-package io.citrine.pluginplussign.plugin;
+package org.elasticsearch.pluginplussign.plugin;
+
 import  org.elasticsearch.index.analysis.AnalysisModule;
 
 public class PlusSignBinderProcessor extends AnalysisModule.AnalysisBinderProcessor {
@@ -9,6 +10,6 @@ public class PlusSignBinderProcessor extends AnalysisModule.AnalysisBinderProces
     @Override
     public void processAnalyzers(AnalyzersBindings analyzersBindings) {
         analyzersBindings.processAnalyzer(PlusSignAnalyzerProvider.NAME,
-            PlusSignAnalyzerProvider.class);
+                PlusSignAnalyzerProvider.class);
     }
 }
