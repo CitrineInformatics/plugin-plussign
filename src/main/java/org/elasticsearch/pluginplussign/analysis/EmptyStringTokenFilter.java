@@ -1,4 +1,5 @@
-package io.citrine.pluginplussign.analysis;
+package org.elasticsearch.pluginplussign.analysis;
+
 import  org.apache.lucene.analysis.TokenFilter;
 import  org.apache.lucene.analysis.TokenStream;
 import  org.apache.lucene.analysis.tokenattributes.CharTermAttribute;

@@ -1,4 +1,5 @@
-package io.citrine.pluginplussign.analysis;
+package org.elasticsearch.pluginplussign.analysis;
+
 import  org.apache.lucene.analysis.Tokenizer;
 import  org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import  java.io.IOException;
@@ -59,20 +60,8 @@ public class PlusSignTokenizer extends Tokenizer {
      * IOException is found - you can choose how you want to deal with the IOException, but
      * for our purposes, we do not need to try to recover from it.
      */
-    public PlusSignTokenizer(Reader reader) {
-        super(reader);
-        int numChars;
-        char[] buffer = new char[1024];
-        StringBuilder stringBuilder = new StringBuilder();
-        try {
-            while ((numChars = reader.read(buffer, 0, buffer.length)) != -1) {
-                stringBuilder.append(buffer, 0, numChars);
-            }
-        }
-        catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        this.stringToTokenize = stringBuilder.toString();
+    public PlusSignTokenizer() {
+        super();
     }
 
     /* Reset the stored position for this object when reset() is called.
@@ -81,6 +70,20 @@ public class PlusSignTokenizer extends Tokenizer {
     public void reset() throws IOException {
         super.reset();
         this.position = 0;
+
+        int numChars;
+        char[] buffer = new char[1024];
+        StringBuilder stringBuilder = new StringBuilder();
+
+        try {
+            while ((numChars = this.input.read(buffer, 0, buffer.length)) != -1) {
+                stringBuilder.append(buffer, 0, numChars);
+            }
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        this.stringToTokenize = stringBuilder.toString();
     }
 
     /* This object stores the string that we are turning into tokens. We will process its content

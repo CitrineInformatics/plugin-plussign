@@ -1,13 +1,14 @@
-package io.citrine.pluginplussign.plugin;
-import  org.elasticsearch.index.analysis.AnalysisModule;
-import  org.elasticsearch.plugins.AbstractPlugin;
+package org.elasticsearch.pluginplussign.plugin;
 
-public class PlusSignPlugin extends AbstractPlugin {
+import  org.elasticsearch.index.analysis.AnalysisModule;
+import  org.elasticsearch.plugins.Plugin;
+
+public class PlusSignPlugin extends Plugin {
 
     /* Set the name that will be assigned to this plugin. */
     @Override
     public String name() {
-        return "plugin-plussign";
+        return "Plus Sign Analyzer Test";
     }
 
     /* Return a description of this plugin. */
